@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// da bi dobili pristup pomocu node.js na data.js moramo unijeti donji primer!
-// sa require ce uci u date.js i pokusati pokrenuti nas kod
+
 const date = require(__dirname + "/node_modules/date.js");
 
 const app = express();
@@ -62,7 +61,6 @@ app.post("/work", function (req, res) {
     workItems.push(item);
     res.redirect("/work");
 });
-// ubacivanjem about.ejs i prebacivanje istog na sajt 
 app.get("/about", function (req, res) {
     res.render("about");
 })
